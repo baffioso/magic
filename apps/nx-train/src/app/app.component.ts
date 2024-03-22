@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component, effect, ElementRef, inject, viewChild } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { Store } from './store';
+import { Store } from '@nx-train/data-access/store';
 import { JsonPipe } from '@angular/common';
-import { Post } from './api.service';
+import { Post } from '@nx-train/data-access/api-service';
 import { MagicCardListComponent } from '@nx-train/ui/magic-card-list';
 import { MagicCardFilterComponent } from '@nx-train/ui/magic-card-filter';
 import { Filter } from '@nx-train/shared/types';

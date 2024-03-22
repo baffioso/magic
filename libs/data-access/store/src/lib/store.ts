@@ -4,9 +4,9 @@ import { rxMethod } from '@ngrx/signals/rxjs-interop';
 import { tapResponse } from '@ngrx/operators'
 import { Person, Friend } from "@nx-train/shared/types";
 import { pipe, switchMap } from "rxjs";
-import { ApiService, Post } from "./api.service";
+import { ApiService, Post } from "@nx-train/data-access/api-service";
 import { HttpErrorResponse } from "@angular/common/http";
-import { withMagicCards } from "./magic-card.feature";
+import { withMagicCards } from "@nx-train//data-access/magic-card-store-feature";
 
 export type State = {
   person: Person,

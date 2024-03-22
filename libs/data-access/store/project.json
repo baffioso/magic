@@ -1,0 +1,26 @@
+{
+  "name": "store",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/data-access/store/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/data-access/store",
+        "main": "libs/data-access/store/src/index.ts",
+        "tsConfig": "libs/data-access/store/tsconfig.lib.json",
+        "assets": ["libs/data-access/store/*.md"]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/data-access/store/jest.config.ts"
+      }
+    }
+  },
+  "tags": []
+}
