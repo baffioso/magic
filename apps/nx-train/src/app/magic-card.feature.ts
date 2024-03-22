@@ -2,7 +2,7 @@ import { patchState, signalStoreFeature, withComputed, withMethods, withState } 
 import { computed, inject } from "@angular/core";
 import { tapResponse } from "@ngrx/operators";
 import { HttpErrorResponse } from "@angular/common/http";
-import { MagicCardService } from "./magic-card.service";
+import { MagicCardService } from "@nx-train/data-access/magic-card-service";
 import { rxMethod } from "@ngrx/signals/rxjs-interop";
 import { debounceTime, distinctUntilChanged, map, pipe, switchMap } from "rxjs";
 import { Filter, MagicCard } from "@nx-train/shared/types";

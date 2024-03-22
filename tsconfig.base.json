@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@nx-train//data-access/magic-card-store-feature": [
+        "libs/data-access/magic-card-store-feature/src/index.ts"
+      ],
       "@nx-train/data-access/magic-card-service": [
         "libs/data-access/magic-card-service/src/index.ts"
       ],
