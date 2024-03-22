@@ -17,6 +17,9 @@
     "paths": {
       "@nx-train/shared/types": ["libs/shared/types/src/index.ts"],
       "@nx-train/ui/header": ["libs/ui/header/src/index.ts"],
+      "@nx-train/ui/magic-card-filter": [
+        "libs/ui/magic-card-filter/src/index.ts"
+      ],
       "@nx-train/ui/magic-card-list": ["libs/ui/magic-card-list/src/index.ts"]
     }
   },
