@@ -6,7 +6,7 @@ import { Person, Friend } from "@nx-train/shared/types";
 import { pipe, switchMap } from "rxjs";
 import { ApiService, Post } from "./api.service";
 import { HttpErrorResponse } from "@angular/common/http";
-import { withMagicCards } from "./magic-card.store";
+import { withMagicCards } from "./magic-card.feature";
 
 export type State = {
   person: Person,
@@ -37,8 +37,8 @@ const initialState: State = {
 };
 
 export const Store = signalStore(
-  withMagicCards(),
   withState<State>(initialState),
+  withMagicCards(),
 
   withComputed((state) => ({
     ageString: computed<string>(() => `I'm ${state.person.age()}`),

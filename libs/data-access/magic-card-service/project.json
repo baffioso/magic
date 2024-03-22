@@ -1,0 +1,26 @@
+{
+  "name": "magic-card-service",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/data-access/magic-card-service/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/data-access/magic-card-service",
+        "main": "libs/data-access/magic-card-service/src/index.ts",
+        "tsConfig": "libs/data-access/magic-card-service/tsconfig.lib.json",
+        "assets": ["libs/data-access/magic-card-service/*.md"]
+      }
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/data-access/magic-card-service/jest.config.ts"
+      }
+    }
+  },
+  "tags": []
+}

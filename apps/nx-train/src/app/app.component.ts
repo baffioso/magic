@@ -4,10 +4,12 @@ import { Store } from './store';
 import { JsonPipe } from '@angular/common';
 import { Post } from './api.service';
 import { MagicCardListComponent } from '@nx-train/ui/magic-card-list';
+import { MagicCardFilterComponent } from '@nx-train/ui/magic-card-filter';
+import { Filter } from '@nx-train/shared/types';
 
 @Component({
   standalone: true,
-  imports: [RouterModule, JsonPipe, MagicCardListComponent],
+  imports: [RouterModule, JsonPipe, MagicCardListComponent, MagicCardFilterComponent],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
@@ -37,6 +39,10 @@ export class AppComponent {
 
   onSelectPost(post: Post): void {
     this.store.selectPostId(post.id);
+  }
+
+  onFilterChange(filter: Filter): void {
+    console.log('filterChange', filter);
   }
 
   constructor() {

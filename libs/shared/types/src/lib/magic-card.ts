@@ -9,7 +9,7 @@ export interface MagicCard {
   colors: string[];
   colorIdentity: string[];
   type: string;
-  types: string[];
+  types: Type[];
   subtypes?: string[];
   rarity: string;
   set: string;
@@ -34,6 +34,21 @@ export interface MagicCard {
   supertypes?: string[];
 }
 
+export type Type =
+  'Creature' |
+  'Enchantment' |
+  'Artifact' |
+  'Instant' |
+  'Sorcery' |
+  'Planeswalker' |
+  'Land';
+
+export type Color =
+  'W' |
+  'R' |
+  'U' |
+  'B';
+
 interface Ruling {
   date: string;
   text: string;
@@ -53,3 +68,5 @@ interface ForeignName {
   language: string;
   multiverseid: number;
 }
+
+

@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@nx-train/data-access/magic-card-service": [
+        "libs/data-access/magic-card-service/src/index.ts"
+      ],
       "@nx-train/shared/types": ["libs/shared/types/src/index.ts"],
       "@nx-train/ui/header": ["libs/ui/header/src/index.ts"],
       "@nx-train/ui/magic-card-filter": [

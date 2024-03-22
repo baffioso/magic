@@ -5,7 +5,7 @@ import { HttpErrorResponse } from "@angular/common/http";
 import { MagicCardService } from "./magic-card.service";
 import { rxMethod } from "@ngrx/signals/rxjs-interop";
 import { debounceTime, distinctUntilChanged, map, pipe, switchMap } from "rxjs";
-import { MagicCard } from "@nx-train/shared/types";
+import { Filter, MagicCard } from "@nx-train/shared/types";
 
 export type State = {
   cards: MagicCard[]
@@ -52,4 +52,8 @@ export function withMagicCards() {
       ),
     }))
   )
+}
+
+export function setSearchTerm(searchTerm: string): Partial<Filter> {
+  return { searchTerm };
 }
