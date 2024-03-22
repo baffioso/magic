@@ -1,0 +1,28 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 300px));
+  gap: 20px;
+  justify-content: center;
+  background-color: mediumaquamarine;
+  padding: 10px;
+
+  .card {
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-center;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+    background-color: rgb(217, 252, 206);
+    color: rgb(24, 24, 24);
+
+    img {
+      width: 100%;
+      border-radius: 15px;
+    }
+  }
+}
+

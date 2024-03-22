@@ -1,1 +1,33 @@
-<app-nx-welcome></app-nx-welcome> <router-outlet></router-outlet>
+<lib-magic-card-list [cards]="store.cardsWithImage()"></lib-magic-card-list>
+
+<h1>{{store.person.name()}}: {{store.ageString()}}</h1>
+
+<h2>{{store.selectedPost()?.id}}</h2>
+
+<button (click)="onAddFriend()">Add friend</button>
+<button (click)="onRemoveFriend()">Remove</button>
+
+
+@for (friend of store.friends(); track $index) {
+  <ul>
+    <li>
+      {{friend.name}}
+    </li>
+  </ul>
+}
+
+@for (post of store.posts(); track $index) {
+  <div class="card" [class.selected]="store.selectedPostId() === post.id" (click)="onSelectPost(post)">
+    <h1>{{post.title}}</h1>
+    <p>{{post.body}}</p>
+  </div>
+}
+
+<dialog #dialog>
+  <h1>{{store.selectedPost()?.title}}</h1>
+  <p>{{store.selectedPost()?.body}}</p>
+
+  <form method="dialog">
+    <button>OK</button>
+  </form>
+</dialog>

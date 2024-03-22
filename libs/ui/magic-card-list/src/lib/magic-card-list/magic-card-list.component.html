@@ -1,0 +1,14 @@
+<header>
+  <input type="text" (keyup)="onSearchCange($event)">
+</header>
+
+<div class="container">
+  @for (card of filteredCards(); track $index) {
+    <div class="card">
+      <h2>{{card.name}}</h2>
+      <img src="{{card.imageUrl}}" />
+      <p>{{card.text}}</p>
+    </div>
+  }
+</div>
+
