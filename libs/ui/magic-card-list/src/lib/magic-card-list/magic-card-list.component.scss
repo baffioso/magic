@@ -2,9 +2,11 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 300px));
   gap: 20px;
+  height: 100%;
   justify-content: center;
   background-color: mediumaquamarine;
   padding: 10px;
+  overflow: auto;
 
   .card {
     font-family: 'Courier New', Courier, monospace;

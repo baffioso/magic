@@ -1,0 +1,70 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 10px;
+
+  .search {
+    // Nice input search style
+    border: 1px solid rgb(35, 35, 93);
+    border-radius: 5px;
+    padding: 10px;
+
+  }
+
+  .colors {
+    .color-btn {
+      border: unset;
+      border-radius: 50%;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      height: 45px;
+      width: 45px;
+
+      img {
+        height: 30px;
+        width: 30px;
+      }
+    }
+  }
+
+  .subtypes {
+    display: flex;
+    overflow: auto;
+    background-color: rosybrown;
+
+    .subtype-btn {
+      border: unset;
+      padding: 10px;
+      height: 45px;
+    }
+
+  }
+
+
+  button.selected {
+    background-color: rgb(35, 35, 93) !important;
+    color: white;
+  }
+}
+
+
+
+
+
+button {
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgb(221, 221, 221) !important;
+    // animate scale
+    transform: scale(1.05);
+    transition: all 0.3s;
+
+  }
+}
+
+

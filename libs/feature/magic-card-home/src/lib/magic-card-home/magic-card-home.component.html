@@ -1,1 +1,9 @@
-<p>magic-card-home works!</p>
+@if (store.loading()) {
+  <div class="loading">Loading...</div>
+}
+
+<div class="container">
+  <lib-magic-card-filter (filterChange)="onFilterChange($event)"></lib-magic-card-filter>
+  <lib-magic-card-list [cards]="store.cardsWithImage()"></lib-magic-card-list>
+</div>
+

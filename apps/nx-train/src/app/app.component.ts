@@ -3,13 +3,12 @@ import { RouterModule } from '@angular/router';
 import { Store } from '@nx-train/data-access/store';
 import { JsonPipe } from '@angular/common';
 import { Post } from '@nx-train/data-access/api-service';
-import { MagicCardListComponent } from '@nx-train/ui/magic-card-list';
-import { MagicCardFilterComponent } from '@nx-train/ui/magic-card-filter';
 import { Filter } from '@nx-train/shared/types';
+import { MagicCardHomeComponent } from '@nx-train/feature/magic-card-home';
 
 @Component({
   standalone: true,
-  imports: [RouterModule, JsonPipe, MagicCardListComponent, MagicCardFilterComponent],
+  imports: [RouterModule, JsonPipe, MagicCardHomeComponent],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

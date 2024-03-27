@@ -43,11 +43,23 @@ export type Type =
   'Planeswalker' |
   'Land';
 
-export type Color =
-  'W' |
-  'R' |
-  'U' |
-  'B';
+export enum Subtype {
+  Dragon = 'Dragon',
+  Demon = 'Demon',
+  Goblin = 'Goblin',
+  Tyranid = 'Tyranid',
+  Alien = 'Alien',
+  Vampire = 'Vampire',
+  Orc = 'Orc',
+}
+
+export enum Color {
+  White = 'W',
+  Red = 'R',
+  Blue = 'U',
+  Black = 'B',
+  Green = 'G',
+}
 
 interface Ruling {
   date: string;

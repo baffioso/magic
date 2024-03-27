@@ -1,1 +1,20 @@
-<button (click)="onFilterChange({searchTerm: 'Lotus'})">Filter</button>
+<div class="container">
+  <input class="search" placeholder="Search" type="search" (change)="onSearchCange($event)">
+
+  <div class="colors">
+    @for (color of colors(); track $index) {
+      <button class="color-btn" (click)="onColorChange(color.value)" [class.selected]="highlightColor(color.value)">
+        <img [src]="color.image">
+        <!-- {{ color.key }} -->
+      </button>
+    }
+  </div>
+
+  <div class="subtypes">
+    @for (type of subtypes(); track $index) {
+      <button class="subtype-btn" (click)="onSubtypeChange(type.value)" [class.selected]="highlightSubtype(type.value)">
+        {{ type.value }}
+      </button>
+    }
+  </div>
+</div>
