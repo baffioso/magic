@@ -8,16 +8,26 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:application",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/nx-train",
         "index": "apps/nx-train/src/index.html",
         "browser": "apps/nx-train/src/main.ts",
-        "polyfills": ["zone.js"],
+        "polyfills": [
+          "zone.js"
+        ],
         "tsConfig": "apps/nx-train/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": ["apps/nx-train/src/favicon.ico", "apps/nx-train/src/assets"],
-        "styles": ["apps/nx-train/src/styles.scss"],
+        "assets": [
+          "apps/nx-train/src/favicon.ico",
+          "apps/nx-train/src/assets",
+          "apps/nx-train/src/manifest.webmanifest"
+        ],
+        "styles": [
+          "apps/nx-train/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -34,7 +44,8 @@
               "maximumError": "4kb"
             }
           ],
-          "outputHashing": "all"
+          "outputHashing": "all",
+          "serviceWorker": "apps/nx-train/ngsw-config.json"
         },
         "development": {
           "optimization": false,
@@ -67,7 +78,9 @@
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "outputs": [
+        "{workspaceRoot}/coverage/{projectRoot}"
+      ],
       "options": {
         "jestConfig": "apps/nx-train/jest.config.ts"
       }
