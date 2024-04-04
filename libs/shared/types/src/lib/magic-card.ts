@@ -51,6 +51,7 @@ export enum Subtype {
   Alien = 'Alien',
   Vampire = 'Vampire',
   Orc = 'Orc',
+  Dinosaur = 'Dinosaur',
 }
 
 export enum Color {
