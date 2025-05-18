@@ -52,6 +52,7 @@ export enum Subtype {
   Vampire = 'Vampire',
   Orc = 'Orc',
   Dinosaur = 'Dinosaur',
+  Cat = 'Cat',
 }
 
 export enum Color {
